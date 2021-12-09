@@ -4,25 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="https://glitch.com/favicon.ico" />
-    <title>Hello World!</title>
+    <title>Split!</title>
 
     <!-- Meta tags for SEO and social sharing -->
-    <link rel="canonical" href="https://glitch-hello-website.glitch.me/" />
+    <link rel="canonical" href="https://breakup-zone.glitch.me/" />
     <meta
       name="description"
-      content="A simple website, built with Glitch. Remix it to get your own."
+      content="announce your breakup like celeb mags."
     />
     <meta name="robots" content="index,follow" />
-    <meta property="og:title" content="Hello World!" />
+    <meta property="og:title" content="Split!" />
     <meta property="og:type" content="article" />
-    <meta property="og:url" content="https://glitch-hello-website.glitch.me/" />
+    <meta property="og:url" content="https://split-.glitch.me/" />
     <meta
       property="og:description"
-      content="A simple website, built with Glitch. Remix it to get your own."
+      content="announce your breakup like celeb mags"
     />
     <meta
       property="og:image"
-      content="https://cdn.glitch.com/605e2a51-d45f-4d87-a285-9410ad350515%2Fhello-website-social.png?v=1616712748147"
+      content="https://cdn.glitch.me/ef88e080-67af-4955-ac6a-d5fdc8a1866e%2Fimages.jpeg?v=1638479309983"
     />
     <meta name="twitter:card" content="summary" />
 
@@ -37,25 +37,29 @@
   </head>
   <body>
     <div class="wrapper">
-      <section>
-        <h1>breakup zone</h1>
+      <section class="options">
+        <h1>Split!</h1>
         <div>
-          <input type="file" id="fileinput">
+          <input type="file" disabled id="fileinput">
+        </div>
+        <div class="tears">
+          <button class="tear" aria-label="Select Tear 1"><img crossOrigin="Anonymous" id="tear" height="200" src="https://cdn.glitch.me/ef88e080-67af-4955-ac6a-d5fdc8a1866e%2Ftear.png?v=1638546626364"></button>
+          <button class="tear" aria-label="Select Tear 2"><img crossOrigin="Anonymous" id="tear2" height="200" src="https://cdn.glitch.me/ef88e080-67af-4955-ac6a-d5fdc8a1866e%2Ftear2.png?v=1638546629209"></button>
+           <button class="tear" aria-label="Select Bolt"><img crossOrigin="Anonymous" id="bolt" height="200" src="https://cdn.glitch.me/ef88e080-67af-4955-ac6a-d5fdc8a1866e%2FYellow-Thunderbolt-Transparent%20(1).png?v=1638546866996"></button>
         </div>
       </section>
+      
       <div class="content" role="main">
+        <div id="loading" class="hidden">
+          <img crossOrigin="Anonymous" alt="Loading" src="https://cdn.glitch.me/ef88e080-67af-4955-ac6a-d5fdc8a1866e%2F25.svg?v=1638980725389" />
+        </div>
         <img
+             class="hidden"
           id="uploaded"
         />
         <canvas id="overlay"></canvas>
+        <a class="hidden" id="download" href="">Download</a>
       </div>
-      <footer>
-        <a id="download" download="over.jpg" href="">Download</a>
-        <div class="tears">
-          <button class="tear" aria-label="Select Tear 1"><img id="tear" height="200" src="tear.png"></button>
-          <button class="tear" aria-label="Select Tear 2"><img id="tear2" height="200" src="tear2.png"></button>
-        </div>
-      </footer>
     </div>
   </body>
 </html>
